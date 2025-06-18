@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "4.0"
+metadata:
+  name: fiorilikeapp
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          destination: S4H
+          url: http://122.162.240.164:8021/
+          client: '800'
+        app:
+          name: ZSAN_BIS_UI5
+          description: Manage Fruits App
+          package: ZSAN_BIS1
+          transport: S4DK903007
+        exclude:
+          - /test/

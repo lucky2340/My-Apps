@@ -1,0 +1,5 @@
+<view:View xmlns:view="sap.ui.core.mvc" xmlns="sap.m" controllerName="ibm.cs.ps.controller.View3">
+    <Page>
+        <Label text="{name}"></Label>
+    </Page>
+</view:View>

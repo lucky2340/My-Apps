@@ -1,0 +1,99 @@
+{
+    "sap.app": {
+        "id": "ibm.cs.ps",
+        "type": "application",
+        "dataSources": {
+            "mainService":{
+                "uri": "/sap/opu/odata/sap/ZSAN_PRD_1_SRV_01/",
+                "type": "OData"
+            }
+        }
+    },
+    "sap.ui":{
+
+    },
+    "sap.ui5":{
+        "models": {
+            "":{
+                "type":"sap.ui.model.odata.v2.ODataModel",
+                "dataSource": "mainService"
+            },
+            "fruits":{
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "mockdata/fruits.json"
+            },
+            "i18n":{
+                "type":"sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleUrl": "i18n/i18n.properties"
+                }
+            }
+        },
+        "rootView":{
+            "viewName": "ibm.cs.ps.view.App",
+            "type": "XML",
+            "id": "idRootView"
+        },
+        "routing": {
+            "config":{
+                "viewPath": "ibm.cs.ps.view",
+                "clearControlAggregation": true,
+                "controlId": "idApp",
+                "controlAggregation": "true"
+            },
+            "routes":[
+                {
+                    "pattern": "",
+                    "name": "home",
+                    "target":["narendra","modi"]
+                },
+                {
+                    "pattern": "fruits/{fruitId}",
+                    "name": "detail",
+                    "target":["narendra","putin"]
+                },{
+                    "pattern": "supplier/{supplierId}",
+                    "name": "vendor",
+                    "target":["narendra","macroni"]
+                },
+                {
+                    "pattern": "manageProduct",
+                    "name": "Add",
+                    "target":["narendra","Jain"]
+                }
+            ],
+            "targets": {
+                "narendra":{
+                    "viewName": "View1",
+                    "viewType": "XML",
+                    "viewId": "idView1",
+                    "controlAggregation": "masterPages"
+                },
+                "modi":{
+                    "viewName": "Empty",
+                    "viewType": "XML",
+                    "viewId": "idEmpty",
+                    "controlAggregation": "detailPages"
+                },
+                "putin":{
+                    "viewName": "View2",
+                    "viewType": "XML",
+                    "viewId": "idView2",
+                    "controlAggregation": "detailPages"
+                },
+                "macroni":{
+                    "viewName": "View3",
+                    "viewType": "XML",
+                    "viewId": "idView3",
+                    "controlAggregation": "detailPages"
+                },
+                "Jain":{
+                    "viewName": "Add",
+                    "viewType": "XML",
+                    "viewId": "idAdd",
+                    "controlAggregation": "detailPages"
+                }
+            }
+        }
+    }
+}

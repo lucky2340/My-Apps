@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/core/UIComponent"],function(t){return t.extend("ibm.cs.ps.Component",{metadata:{manifest:"json"},init:function(){t.prototype.init.apply(this);var i=this.getRouter();i.initialize()},destroy:function(){}})});
+//# sourceMappingURL=Component.js.map

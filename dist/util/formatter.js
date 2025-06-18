@@ -1,0 +1,2 @@
+sap.ui.define([],function(){return{getStatus:function(t){var e=this.getOwnerComponent().getModel().getProperty("/status");for(let n=0;n<e.length;n++){const r=e[n];if(r.key===t){return r.value}}}}});
+//# sourceMappingURL=formatter.js.map

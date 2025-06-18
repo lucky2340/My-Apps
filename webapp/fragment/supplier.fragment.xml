@@ -1,0 +1,28 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+     <Table items="{/supplier}" itemPress="onItemSelect">
+                            <columns>
+                                <Column>
+                                    <Label text="Name"></Label>
+                                </Column>
+                                <Column>
+                                    <Label text="City"></Label>
+                                </Column>
+                                <Column>
+                                    <Label text="Contact Person"></Label>
+                                </Column>
+                                <Column>
+                                    <Label text="Contact Number"></Label>
+                                </Column>
+                            </columns>
+                            <items>
+                                <ColumnListItem type="Navigation">
+                                    <cells>
+                                        <Text text="{name}"></Text>
+                                        <Input value="{city}" showValueHelp="true" valueHelpRequest="onF4"></Input>
+                                        <Text text="{person}"></Text>
+                                        <Text text="{contactNo}"></Text>
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+</core:FragmentDefinition>

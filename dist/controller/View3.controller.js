@@ -1,0 +1,2 @@
+sap.ui.define(["ibm/cs/ps/controller/BaseController"],function(e){return e.extend("ibm.cs.ps.controller.View3",{onInit:function(){this.oRouter=this.getOwnerComponent().getRouter();this.oRouter.getRoute("vendor").attachMatched(this.herculis,this)},herculis:function(e){var t=e.getParameter("arguments").supplierId;var r="/supplier/"+t;this.getView().bindElement(r)}})});
+//# sourceMappingURL=View3.controller.js.map

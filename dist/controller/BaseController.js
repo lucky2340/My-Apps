@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/core/mvc/Controller","ibm/cs/ps/util/formatter"],function(r,t){return r.extend("ibm.cs.ps.controller.BaseController",{formatter:t,onInit:function(){}})});
+//# sourceMappingURL=BaseController.js.map
